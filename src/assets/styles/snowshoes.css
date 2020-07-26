@@ -1,0 +1,152 @@
+.snowshoes-grid{
+  height: 440px;
+  display: grid;
+  grid-template-columns: 530px 1fr;
+}
+
+.balls-carousel{
+  background: url("../images/snowshoes/ball.png");
+  background-position: center;
+  background-size: cover;
+  display: grid;
+  grid-template-columns: repeat(5,1fr);
+}
+
+.balls-container{
+  grid-column: 3 / span 3;
+  place-self: center;
+}
+
+.title-first, .subtitle{
+  font-size: 50px;
+  margin: 0;
+}
+
+.title-first{
+  font-family: "HelveticaNeu";
+}
+
+.subtitle{
+  font-family: "HelveticaNeuLt";
+}
+
+.title-description{
+  max-width: 280px;
+  font-size: 18px;
+  line-height: 30px;
+  letter-spacing: 0.51px;
+  font-family: "HelveticaNeu";
+}
+
+.points{
+  display: flex;
+  margin-bottom: 32px;
+}
+
+.point{
+  width: 8px;
+  height: 7.8px;
+  border-radius: 50%;
+  background: #fff;
+  margin-right: 20px;
+}
+
+.point.active{
+  background: #cbe346;
+}
+
+.controls{
+  display: flex;
+}
+
+.controls > div{
+  margin-right: 15px;
+}
+
+.control-left, .control-right
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: 300ms;
+}
+
+.control-left:hover, .control-right:hover{
+  transform: scale(1.1);
+}
+
+.control-left{
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 1px solid #fff;
+}
+
+.control-right{
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: #cbe346;
+  box-shadow: 0px 15px 40px -7px rgba(0,0,0,1);
+}
+
+.play {
+  width: 0; 
+  height: 0; 
+  border-left: 15px solid #fff;
+  border-top: 7px solid transparent;
+  border-bottom: 7px solid transparent; 
+}
+
+.play-left{
+  transform: rotateY(-190deg);
+}
+
+.snowshoes-carousel{
+  overflow: auto;
+  padding: 51px 0 0 52px;
+}
+
+.snowshoe-section-container{
+  display: grid;
+  grid-template-columns: repeat(3,288px);
+  grid-auto-columns: 1fr;
+  grid-auto-flow:column;  
+  column-gap: 40px;
+}
+
+.snowshoe-card{
+  width: 288px;
+  height: 344px;
+  border-radius: 21px;
+  background: #f3f4f8;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: 300ms;
+}
+
+.snowshoe-card:hover{
+  transform: scale(1.1);
+}
+
+.card-number{
+  width: 39px;
+  height: 39px;
+  border-radius: 50%;
+  margin-top: 11px;
+  margin-left: 17px;
+  color: #fff;
+  background: #cbe346;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "HelveticaNeuLt";
+}
+
+.snowshow-image{
+  max-width: 100%;
+  height: 290px;
+  object-fit: contain;
+}

@@ -1,0 +1,124 @@
+.header-grid{
+  max-width: 1440px;
+  width: 100%;
+  margin: 0 auto;
+  height: 785px;
+  background: url('../images/header/group.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: grid;
+  grid-template-columns: 85px 1fr 85px;
+}
+
+.ball-place{
+  width: 100%;
+  border-right: 1px solid #fff;
+  display: flex;
+  justify-content: center;
+}
+
+.ball{
+  margin-top: 25px;
+}
+
+.navbar-place{
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 80px 1fr;
+}
+
+.navbar-container{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 0 0 0 60px;
+
+}
+
+.navbar{
+  height: 100%;
+}
+
+.links{
+  width: 579px;
+  height: 37px;
+}
+
+.language-text{
+  color: #fff;
+  margin: 0 10px;
+  font-family: "HelveticaNeuLt";
+}
+
+.link-list{
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  padding: 0;
+}
+
+.link-item{
+  display: flex;
+  height: 100%;
+  letter-spacing: 1.4px;
+  font-family: "HelveticaNeuLt";
+}
+
+.link-item a{
+  height: 100%;
+  color: #d8d8d8;
+  text-decoration: none;
+}
+
+.link-item-active::after{
+  content: "";
+  display: block;
+  margin-top: 15px;
+  /* position: absolute; */
+  background-color: #fff;
+  width: 25px;
+  height: 3px;
+  left: 0;
+  z-index: 1;
+}
+
+.info{
+  display: flex;
+  align-items: center;
+  padding: 0 60px;
+}
+
+.info-container{
+  margin-top: -150px;
+  width: 670px;
+}
+
+.info-text{
+  color: #fff;
+  font-size: 53px;
+  line-height: 68px;
+  letter-spacing: -0.05px;
+  font-family: "HelveticaNeuBold";
+}
+
+.text-bold{
+  font-family: "HelveticaNeuBold"; 
+}
+
+.tennis-text{
+  color: #cbe346;
+  font-weight: 600;
+}
+
+.info-button{
+  width: 269px;
+  height: 53px;
+  color: #fff;
+  outline: 0;
+  padding: 20px 30px;
+  border: 1px solid #d8d8d8;
+  border-radius: 26.5px;
+  background: transparent;
+  cursor: pointer;
+}
