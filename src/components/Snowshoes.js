@@ -1,6 +1,6 @@
 import React from 'react'
 import '../assets/styles/snowshoes.css'
-import group from '../assets/images/snowshoes/group.png'
+import group from '../assets/images/snowshoes/snowshoe.png'
 
 export const Snowshoes = () => {
 
