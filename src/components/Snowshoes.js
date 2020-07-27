@@ -1,10 +1,8 @@
 import React from 'react'
 import '../assets/styles/snowshoes.css'
-import group from '../assets/images/snowshoes/snowshoe.png'
+import snowshoe from '../assets/images/snowshoes/snowshoe.png'
 
 export const Snowshoes = () => {
-
-  let cards = new Array(5).fill('')
 
   return (
     <section className="snowshoes">
@@ -36,11 +34,11 @@ export const Snowshoes = () => {
           </div>
           <div className="snowshoes-carousel">
             <div className="snowshoe-section-container">
-              {cards.map((elem, index) => {
+              {new Array(5).fill('').map((elem, index) => {
                 return (
                   <div className="snowshoe-card">
                     <div className="card-number">{index + 1}</div>
-                    <img className="snowshow-image" src={group} alt="" />
+                    <img className="snowshow-image" src={snowshoe} alt="" />
                   </div>
                 )
               })}

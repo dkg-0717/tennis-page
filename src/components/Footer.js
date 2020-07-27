@@ -1,5 +1,5 @@
 import React from 'react'
-import footerball from '../assets/images/footer/footer-ball.png'
+import footerball from '../assets/images/footer/footerball.png'
 import linkedin from '../assets/images/footer/linkedin.png'
 import vimeo from '../assets/images/footer/vimeo.png'
 import instagram from '../assets/images/footer/instagram.png'
