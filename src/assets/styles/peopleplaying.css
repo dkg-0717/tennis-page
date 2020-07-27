@@ -1,6 +1,19 @@
 .peopleplaying-grid{
-  height: 586px;
+  min-height: 586px;
   background: #f1f1f1;
   background: url("../images/peopleplaying/athlete.png");
-  background-size: contain;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+@media (max-width:768px){
+  .peopleplaying-grid{
+    background-size: auto auto;
+  }
+}
+
+@media (max-width: 1000px){
+  .peopleplaying-grid{
+    background-size: cover;
+  }
 }

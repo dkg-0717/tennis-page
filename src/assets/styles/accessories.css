@@ -22,6 +22,9 @@
 .tennis-text{
   margin-top: -95px;
   margin-right: 50px;
+  line-height: 30px;
+  letter-spacing: 1.87px;
+  font-family: "HelveticaNeuLt";
 }
 
 .history{
@@ -50,11 +53,48 @@
 }
 
 .accessories-info{
+  max-width: 400px;
   color: #787878;
   font-size: 18px;
   line-height: 32px;
+  font-family: "HelveticaNeuLt";
   letter-spacing: 0.51px;
   margin: 0;
+  margin-bottom: 10px;
 }
 
+
+@media (max-width: 768px){
+  .accessories-grid{
+    padding: 0 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .accessories-description{
+    font-size: 2em;
+  }
+  .snowshoe-container{
+    margin-bottom: 20px;
+  }
+  .tennis{
+    width: 100%;
+  }
+  .tennis-text{
+    margin: 10px 0;
+  }
+  .history{
+    width: 100%;
+  }
+}
+
+@media (max-width:1000px){
+  .tennis{
+    grid-column: span 2;
+  }
+  .accessories-description{
+    font-size: 2em;
+  }
+}
 

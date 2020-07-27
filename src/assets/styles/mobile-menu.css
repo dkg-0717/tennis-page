@@ -1,0 +1,39 @@
+
+.mobile-menu{
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  background: #fff;
+  z-index: 1;
+  padding: 20px;
+}
+
+.close-button{
+  font-family: "HelveticaNeuBold";
+  text-align: right;
+  padding: 10px;
+}
+
+.links-mobile {
+  width: 1005;
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.links-mobile-container{
+  list-style: none;
+  padding: 0;
+}
+
+.link-mobile-item{
+  font-size: 1.7em;
+  text-align: center;
+}
+
+.link-mobile-item a{
+  color: #282e47;
+  font-family: "HelveticaNeuBold";
+  text-decoration: none;
+}

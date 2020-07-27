@@ -72,8 +72,11 @@ body{
   height: 1px;
 }
 
+.white-tip, .black-tip{
+  margin-left: -11px;
+}
+
 .white-tip{
-  margin-left: -6px;
   border: solid white;
   border-width: 0 1px 1px 0;
   display: inline-block;
@@ -81,7 +84,6 @@ body{
 }
 
 .black-tip{
-  margin-left: -6px;
   border: solid #787878;
   border-width: 0 1px 1px 0;
   display: inline-block;
@@ -116,5 +118,11 @@ body{
   }
   to{
     transform: scale(1.1);
+  }
+}
+
+@media (max-width: 411px){
+  .circle-button{
+    margin: 10px auto;
   }
 }

@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from 'react'
 import '../assets/styles/header.css'
 import ball from '../assets/images/header/ball.png'
+import { MobileMenu } from './MobileMenu'
 
 export const Header = () => {
 
   let [links, setLinks] = useState([])
+  let [isActive, setActive] = useState(0)
 
   useEffect(() => {
     let items = document.querySelectorAll('.link-item a')
@@ -26,58 +28,74 @@ export const Header = () => {
     setStyle(evt.target)
   }
 
+  const openMenu = () => {
+    setActive(1)
+  }
+
   return (
-    <header className="header">
-      <div className="wrapper">
-        <div className="header-grid">
-          <div className="ball-place">
-            <div className="ball">
-              <img src={ball} alt="" />
-            </div>
-          </div>
-          <div className="navbar-place">
-            <div className="navbar-container">
-              <div className="links">
-                <nav className="navbar">
-                  <ul className="link-list">
-                    <li className="link-item">
-                      <a href="#" onClick={handleClick}>Inicio</a>
-                    </li>
-                    <li className="link-item">
-                      <a href="#" onClick={handleClick}>Acerca de nosotros</a>
-                    </li>
-                    <li className="link-item">
-                      <a href="#" onClick={handleClick}>Historia</a>
-                    </li>
-                    <li className="link-item">
-                      <a href="#" onClick={handleClick}>Contacto</a>
-                    </li>
-                  </ul>
-                </nav>
+    <>
+      <MobileMenu isActive={isActive} setActive={setActive} />
+      <header className="header">
+        <div className="wrapper">
+          <div className="header-grid">
+            <div className="ball-place">
+              <div className="menu-mobile" onClick={openMenu}>
+                <div className="line"></div>
+                <div className="line"></div>
+                <div className="line"></div>
               </div>
-              <div className="language">
-                <span className="language-text text-bold">ES</span>
-                <span className="language-text">EN</span>
+              <div className="ball">
+                <div className="language-mobile">
+                  <span className="language-text-mobile text-bold">ES</span>
+                  <span className="language-text-mobile">EN</span>
+                </div>
+                <img src={ball} alt="" />
               </div>
             </div>
-            <div className="info">
-              <div className="info-container">
-                <p className="info-text">
-                  Las mejores raquetas para jugar <span className="tennis-text">Tennis</span>
-                </p>
-                <button className="circle-button border-white text-white">
-                  ACERCA DE NOSOTROS
+            <div className="navbar-place">
+              <div className="navbar-container">
+                <div className="links">
+                  <nav className="navbar">
+                    <ul className="link-list">
+                      <li className="link-item">
+                        <a href="#" onClick={handleClick}>Inicio</a>
+                      </li>
+                      <li className="link-item">
+                        <a href="#" onClick={handleClick}>Acerca de nosotros</a>
+                      </li>
+                      <li className="link-item">
+                        <a href="#" onClick={handleClick}>Historia</a>
+                      </li>
+                      <li className="link-item">
+                        <a href="#" onClick={handleClick}>Contacto</a>
+                      </li>
+                    </ul>
+                  </nav>
+                </div>
+                <div className="language">
+                  <span className="language-text text-bold">ES</span>
+                  <span className="language-text">EN</span>
+                </div>
+              </div>
+              <div className="info">
+                <div className="info-container">
+                  <p className="info-text">
+                    Las mejores raquetas para jugar <span className="tennis-text">Tennis</span>
+                  </p>
+                  <button className="circle-button border-white text-white">
+                    ACERCA DE NOSOTROS
                   <div className="small-arrow">
-                    <div className="line bg-white"></div>
-                    <div className="white-tip right">
+                      <div className="line bg-white"></div>
+                      <div className="white-tip right">
+                      </div>
                     </div>
-                  </div>
-                </button>
+                  </button>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </header>
+      </header>
+    </>
   )
 }

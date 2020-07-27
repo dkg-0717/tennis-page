@@ -45,7 +45,7 @@ module.exports = {
         ]
       },
       {
-        test: /\.jpg|png|gif|svg|mp4|webm$/,
+        test: /\.jpg|png|gif|ttf|svg|mp4|webm$/,
         use: {
           loader: "url-loader",
           options: {

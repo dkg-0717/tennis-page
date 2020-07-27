@@ -1,5 +1,5 @@
 .snowshoes-grid{
-  height: 440px;
+  min-height: 440px;
   display: grid;
   grid-template-columns: 530px 1fr;
 }
@@ -149,4 +149,27 @@
   max-width: 100%;
   height: 290px;
   object-fit: contain;
+}
+
+
+@media (max-width: 768px){
+  .snowshoes-grid{
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2,auto);
+  }
+  .balls-container{
+    grid-column: 1 / 6;
+    padding: 10px;
+  }
+  .snowshoes-carousel{
+    padding: 10px;
+    overflow: scroll;
+  }
+  .snowshoe-section-container{
+    grid-template-columns: 1fr;
+    grid-auto-flow: column;
+  }
+  .snowshoe-card{
+    place-self: center;
+  }
 }

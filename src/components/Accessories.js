@@ -16,11 +16,11 @@ export const Accessories = () => {
             </div>
             <div className="accessories-container">
               <p className="accessories-info">
-                Conoce nuestros accesorios y aprende a jugar
+                Conoce nuestros accesorios y aprende a jugar Tennis cómo un profesional
             </p>
-              <p className="accessories-info">
-                Tennis cómo un profesional
-            </p>
+              {/* <p className="accessories-info">
+                
+            </p> */}
             </div>
           </div>
           <div className="history">

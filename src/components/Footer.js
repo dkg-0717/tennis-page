@@ -31,7 +31,7 @@ export const Footer = () => {
               </ul>
             </div>
             <div className="footer-social">
-              <ul className="footer-list">
+              <ul className="social-list">
                 <li className="social-item">
                   <img src={linkedin} alt="" />
                 </li>
