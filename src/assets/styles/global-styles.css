@@ -31,6 +31,19 @@ body{
   max-width: 1440px;
 }
 
+.active{
+  animation: fadeIn 300ms both;
+}
+
+@keyframes fadeIn{
+  from{
+    transform: scale(0);
+  }
+  to{
+    transform: scale(1);
+  }
+}
+
 .circle-button{
   width: 269px;
   height: 53px;

@@ -1,8 +1,25 @@
-import React from 'react'
+import React, { useState } from 'react'
 import '../assets/styles/snowshoes.css'
 import snowshoe from '../assets/images/snowshoes/snowshoe.png'
 
 export const Snowshoes = () => {
+
+  let [index, setIndex] = useState(0)
+
+  let cardsContain = [
+    { title: 'NUESTRAS', subtitle: 'RAQUETAS', description: '1.Conoce nuestras raquetas y aprende a jugar Tennis cómo un profesional.' },
+    { title: 'NUESTRAS', subtitle: 'RAQUETAS', description: '2.Conoce nuestras raquetas y aprende a jugar Tennis cómo un profesional.' },
+    { title: 'NUESTRAS', subtitle: 'RAQUETAS', description: '3.Conoce nuestras raquetas y aprende a jugar Tennis cómo un profesional.' },
+    { title: 'NUESTRAS', subtitle: 'RAQUETAS', description: '4.Conoce nuestras raquetas y aprende a jugar Tennis cómo un profesional.' },
+  ]
+
+  const next = () => {
+    index < cardsContain.length - 1 && setIndex(index + 1)
+  }
+
+  const back = () => {
+    index > 0 && setIndex(index - 1)
+  }
 
   return (
     <section className="snowshoes">
@@ -11,22 +28,30 @@ export const Snowshoes = () => {
           <div className="balls-carousel">
             <div className="balls-container">
               <div className="title">
-                <p className="title-first text-white">NUESTRAS</p>
-                <p className="subtitle text-white">RAQUETAS</p>
-                <p className="title-description text-white">Conoce nuestras raquetas y aprende a jugar Tennis cómo un profesional.</p>
+                {cardsContain.map((data, idx) => {
+                  return (
+                    idx == index &&
+                    <div className={idx == index ? 'active' : null}>
+                      <p className="title-first text-white">{data.title}</p>
+                      <p className="subtitle text-white">{data.subtitle}</p>
+                      <p className="title-description text-white">{data.description}</p>
+                    </div>
+                  )
+                })}
               </div>
               <div className="description"></div>
               <div className="points">
-                <div className="point active"></div>
-                <div className="point"></div>
-                <div className="point"></div>
-                <div className="point"></div>
+                {cardsContain.map((elem, idx) => {
+                  return (
+                    <div className={`point ${idx == index ? 'active' : null}`}></div>
+                  )
+                })}
               </div>
               <div className="controls">
-                <div className="control-left">
+                <div className="control-left" onClick={back}>
                   <div className="play play-left"></div>
                 </div>
-                <div className="control-right">
+                <div className="control-right" onClick={next}>
                   <div className="play"></div>
                 </div>
               </div>
